@@ -16,7 +16,7 @@ A simple ball balancing environment was implemented as a starting point. The obs
 
 <img align="left" width="400" height="300" src="media/learning_curve.png"><img align="right" width="280" height="280" src="media/test.gif">
 
-
+<br clear="left"/>
 
 
 ## What to change for your own environment?
