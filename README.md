@@ -17,6 +17,8 @@ A simple ball balancing environment was implemented as a starting point. The obs
 <img align="left" width="400" height="300" src="media/learning_curve.png"><img align="right" width="280" height="280" src="media/test.gif">
 
 
+
+
 ## What to change for your own environment?
 
 The model in MJCF format is located in the [assets](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/tree/master/assets) folder. Place the xml file of your own model there. Configure it with the necessary joints and actuators.
