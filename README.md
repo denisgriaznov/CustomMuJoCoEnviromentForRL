@@ -21,15 +21,15 @@ A simple ball balancing environment was implemented as a starting point. The obs
 
 ## What to change for your own environment?
 
-The model in MJCF format is located in the [assets](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/tree/master/assets) folder. Place the xml file of your own model there. Configure it with the necessary joints and actuators.
+1. The model in MJCF format is located in the [assets](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/tree/master/assets) folder. Place the xml file of your own model there. Configure it with the necessary joints and actuators.
 
-By running the [model_viewer.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/model_viewer.py) file, you can test all actuators, as well as the physics of the model in general, in a convenient interactive mode. To do this, insert the name of your model file in this line:
+2. By running the [model_viewer.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/model_viewer.py) file, you can test all actuators, as well as the physics of the model in general, in a convenient interactive mode. To do this, insert the name of your model file in this line:
 
 ```
 model = mujoco.MjModel.from_xml_path("<PATH OF YOUR XML MODEL FILE>")
 ```
 
-Create your own environment class similar to [BallBalanceEnv](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/ball_balance_env.py). 
+3. Create your own environment class similar to [BallBalanceEnv](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/ball_balance_env.py). 
 
 - In the ```__init__``` method, replace the model path with your own, and insert your observation shape into ```observation_space``` (size of observation).
 
@@ -39,8 +39,8 @@ Create your own environment class similar to [BallBalanceEnv](https://github.com
 
 - In the ```_get_obs``` method, return your observations, such as the velocities and coordinates of certain joints.
 
-In the file [learn.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/learn.py), create an instance of your class (instead of BallBalanceEnv). Then you can choose a different algorithm or use your own, now your environment has all the qualities of the Gym environment.
+4. In the file [learn.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/learn.py), create an instance of your class (instead of BallBalanceEnv). Then you can choose a different algorithm or use your own, now your environment has all the qualities of the Gym environment.
 
-In the file you can test your agent by specifying the path to the model saved after training. You can also create a GIF from frames (commented code) :)
+5. In the file you can test your agent by specifying the path to the model saved after training. You can also create a GIF from frames (commented code) :)
 
 
