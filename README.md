@@ -42,5 +42,3 @@ model = mujoco.MjModel.from_xml_path("<PATH OF YOUR XML MODEL FILE>")
 4. In the file [learn.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/learn.py), create an instance of your class (instead of BallBalanceEnv). Then you can choose a different algorithm or use your own, now your environment has all the qualities of the Gym environment.
 
 5. In the file [test.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/test.py) you can test your agent by specifying the path to the model saved after training. You can also create a GIF from frames (commented code) :)
-
-*Note: the file [mujoco_env.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/mujoco_env.py) is a copy from the Gymnasium package and is duplicated for ease of direct editing. For example, to change the rules for reading the path to an xml model (when importing from Gymnasium, you would have to place the models in the folder with the library itself or enter the full path)*
