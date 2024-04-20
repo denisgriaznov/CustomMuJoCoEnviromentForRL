@@ -1,7 +1,8 @@
 import numpy as np
 from gymnasium import utils
-from mujoco_env import MujocoEnv
+from gymnasium.envs.mujoco import MujocoEnv
 from gymnasium.spaces import Box
+import os
 
 
 # you can completely modify this class for your MuJoCo environment by following the directions
@@ -23,7 +24,7 @@ class BallBalanceEnv(MujocoEnv, utils.EzPickle):
         # load your MJCF model with env and choose frames count between actions
         MujocoEnv.__init__(
             self,
-            "ball_balance.xml",
+            os.path.abspath("assets/ball_balance.xml"),
             5,
             observation_space=observation_space,
             **kwargs
