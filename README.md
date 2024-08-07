@@ -23,10 +23,10 @@ A simple ball balancing environment was implemented as a starting point. The obs
 
 1. The model in MJCF format is located in the [assets](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/tree/master/assets) folder. Place the xml file of your own model there. Configure it with the necessary joints and actuators.
 
-2. By running the [model_viewer.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/model_viewer.py) file, you can test all actuators, as well as the physics of the model in general, in a convenient interactive mode. To do this, insert the name of your model file in this line:
+2. By running the [model_viewer.py](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/model_viewer.py) file, you can test all actuators, as well as the physics of the model in general, in a convenient interactive mode. To do this, run the following command:
 
 ```
-model = mujoco.MjModel.from_xml_path("<PATH OF YOUR XML MODEL FILE>")
+python model_viewer.py --path path/towards/your/xml/file
 ```
 
 3. Create your own environment class similar to [BallBalanceEnv](https://github.com/denisgriaznov/CustomMuJoCoEnviromentForRL/blob/master/ball_balance_env.py). 
