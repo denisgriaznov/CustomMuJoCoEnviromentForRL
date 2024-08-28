@@ -5,9 +5,7 @@ This example shows how to create a simple custom MuJoCo model and train a reinfo
 To reproduce the result you will need python packages [MuJoCo](https://mujoco.readthedocs.io/en/stable/python.html), [Gymnasium](https://gymnasium.farama.org/index.html) and [StableBaselines3](https://stable-baselines3.readthedocs.io/en/master/) with the appropriate versions:
 
 ```
-pip install mujoco==3.1.4
-pip install gymnasium==0.29.1
-pip install stable-baselines3==2.3.0
+pip install -r requirements.txt
 ```
 ## Results of custom model
 
